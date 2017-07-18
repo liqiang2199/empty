@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#177ee5</color>
+    <color name="colorPrimaryDark">#94989b</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="orange">#ff9900</color>
+    <color name="white">#ffffff</color>
+    <color name="back">#000000</color>
+    <color name="list_line">#cccccc</color>
+    <color name="shenhui">#666666</color>
+    <color name="back_one">#323232</color>
+
+    <!--主体界面灰色-->
+    <color name="basesub">#f5f5f5</color>
+    <!--主体界面蓝色-->
+    <color name="baseblu">#177ee5</color>
+    <color name="qianhui">#e2e2e2</color>
+    <!-- 主题背景色 -->
+    <!--<color name="mainbg">#177ee5</color>-->
+    <!-- 边线色 -->
+    <color name="footerline">#D7C6AC</color>
+    <!--textcolor灰色 -->
+    <color name="hui">#94989b</color>
+    <!--手势-->
+    <color name="red">#ff0000</color>
+    <color name="base_red">#E6212A</color>
+    <color name="green">#33cc00</color>
+    <color name="basesub_selector_lien">#EDEDED</color>
+
+    <color name="prowall_color_title">#f14d4b</color>
+    <color name="prowall_color_clickevaluationtwo">#08cac2</color>
+    <color name="prowall_color_clickevaluationone">#1675d3</color>
+    <color name="prowall_color_clickevaluationthree">#e64141</color>
+    <color name="prowall_color_clickevaluationfour">#02509e</color>
+    <color name="bill_pay_s_y">#d76368</color>
+    <color name="me_viptextprice">#e8902E</color>
+    <color name="me_invteshare">#757508</color>
+
+    <drawable name="selector_with">#ffffff</drawable>
+    <drawable name="selector_hui">#94989b</drawable>
+
+    <color name="dialog_liner_Division">#ffd0d0d0</color>
+
+</resources>

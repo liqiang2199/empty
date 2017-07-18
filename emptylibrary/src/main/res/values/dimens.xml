@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="xlistview_headhight">110dp</dimen>
+
+
+    <!--空白宽度 -->
+    <dimen name="activity_empty_kuan_35">35dp</dimen>
+    <dimen name="activity_empty_kuan_38">38dp</dimen>
+    <dimen name="activity_empty_kuan_30">30dp</dimen>
+    <dimen name="activity_empty_kuan_50">50dp</dimen>
+
+    <dimen name="activity_title_kuan_42">42dp</dimen>
+    <dimen name="activity_title_kuan_40">40dp</dimen>
+    <dimen name="activity_title_kuan_48">48dp</dimen>
+    <dimen name="activity_title_kuan_20">20dp</dimen>
+    <dimen name="activity_title_kuan_25">25dp</dimen>
+    <dimen name="activity_title_kuan_23">23dp</dimen>
+    <dimen name="activity_title_kuan_140">140dp</dimen>
+    <dimen name="activity_title_kuan_70">70dp</dimen>
+
+
+    <!--pading边框-->
+    <dimen name="pading_kuan_5">5dp</dimen>
+    <dimen name="pading_kuan_10">10dp</dimen>
+    <dimen name="pading_kuan_sevenfive">15dp</dimen>
+    <dimen name="pading_kuan_18">18dp</dimen>
+
+    <dimen name="backgroud_line">1dp</dimen>
+
+
+    <!--项目 字体大小-->
+    <dimen name="textsize_10">10sp</dimen>
+    <dimen name="textsize_12">12sp</dimen>
+    <dimen name="textsize_14">14sp</dimen>
+    <dimen name="textsize_16">16sp</dimen>
+    <dimen name="textsize_18">18sp</dimen>
+    <dimen name="textsize_20">20sp</dimen>
+    <dimen name="textsize_26">26sp</dimen>
+    <dimen name="textsize_36">36sp</dimen>
+</resources>

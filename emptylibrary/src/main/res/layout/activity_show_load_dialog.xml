@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/dialog_back_he"
+        android:gravity="center"
+        android:alpha="0.4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/activity_empty_kuan_50"
+            android:layout_height="@dimen/activity_empty_kuan_50"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/titie_progerss"/>
+
+        <LinearLayout
+            android:id="@+id/lier_doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/pading_kuan_10"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="处理中"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="14sp"/>-->
+            <!--<ImageView-->
+                <!--android:id="@+id/imgeanimal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:src="@drawable/a3"/>-->
+
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+
+</LinearLayout>

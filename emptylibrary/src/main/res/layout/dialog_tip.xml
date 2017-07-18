@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lien_dialog_defferent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="@dimen/pading_kuan_10"
+        android:src="@mipmap/ico_tv_clear"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/dialog_tip_background">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading_kuan_10"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="安卓系统凭借其灵活和\n
+            开放的特性获得了市场的青睐，\n
+            但开放性也意味着APP开发者。"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/ico_agree"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

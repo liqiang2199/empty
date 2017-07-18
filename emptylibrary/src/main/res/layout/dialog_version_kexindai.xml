@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/home_time"
+    android:layout_margin="@dimen/activity_title_kuan_20">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pading_kuan_5"
+        android:background="@drawable/shape_version"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="@string/dialog_UpdateAPP_tip"
+            android:textColor="@color/back"
+            android:textSize="@dimen/textsize_16"
+            android:visibility="visible" />
+
+        <View style="@style/Line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120.0dip"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ffd0d0d0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/baseblu"
+                android:textSize="@dimen/textsize_16"
+                android:text="@string/dialog_srue" />
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffd0d0d0"></LinearLayout>
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/hui"
+                android:textSize="@dimen/textsize_16"
+                android:text="@string/dialog_cancel" />
+        </LinearLayout>
+
+
+</LinearLayout>

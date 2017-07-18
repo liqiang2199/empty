@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">kexinmodule</string>
+
+    <!--pullListView-->
+    <string name="pull_listrefreshup">下拉刷新</string>
+    <string name="pull_listrefreshdown">更多......</string>
+
+    <string name="dialog_tip">提示</string>
+    <string name="dialog_messge">消息</string>
+    <string name="dialog_srue">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_UpdateAPP_tip">升级提示</string>
+    <string name="NET_work_tip">检查当前网络连接</string>
+    <string name="dialog_uploding">加载中</string>
+    <string name="dialog_invtesubmit">提交</string>
+</resources>

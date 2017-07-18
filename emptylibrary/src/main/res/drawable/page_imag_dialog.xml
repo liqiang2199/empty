@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/shape_bg_blue_one" />
+    <item android:state_enabled="true" android:drawable="@drawable/shape_bg_witht_one" />
+    
+</selector>
