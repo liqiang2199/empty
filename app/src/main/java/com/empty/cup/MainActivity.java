@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements ProgressResponseB
         star = (Button) findViewById(R.id.star);
         end_star = (Button) findViewById(R.id.end_star);
         jixu_star = (Button) findViewById(R.id.jixu_star);
-        text_bar = (TextView) findViewById(R.id.text_bar);
+//        text_bar = (TextView) findViewById(R.id.text_bar);
 
         onClickVdd(star);
         onClickVdd(end_star);
@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity implements ProgressResponseB
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            text_bar.setText(contentLength / 1024+"");
+//            text_bar.setText(contentLength / 1024+"");
+            bar.setMax((int) (contentLength / 1024));
         }
     };
 
@@ -95,9 +96,8 @@ public class MainActivity extends AppCompatActivity implements ProgressResponseB
 // 文件总长只需记录一次，要注意断点续传后的contentLength只是剩余部分的长度
         if (this.contentLength == 0L) {
             this.contentLength = contentLength;
-            bar.setMax((int) (contentLength / 1024));
-
-//            handler.obtainMessage().sendToTarget();
+            Log.v("thisdown","      bar 呵呵呵呵       "+(totalBytes + breakPoints) / 1024);
+            handler.obtainMessage().sendToTarget();
         }
     }
 
@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity implements ProgressResponseB
         // 注意加上断点的长度
         this.totalBytes = totalBytes + breakPoints;
         bar.setProgress((int) (totalBytes + breakPoints) / 1024);
-        Log.v("thisdown","      bar       "+(totalBytes + breakPoints) / 1024);
         if (done) {
             // 切换到主线程
 //            Observable
