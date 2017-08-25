@@ -26,11 +26,11 @@ public class TestEmpty extends Activity{
 
     }
     private void Init(){
-        try {
-            JsonUtil.rentrunJsonBeen(null,mapslist);
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            JsonUtil.rentrunJsonBeen(null,mapslist);
+//
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
     }
 }

@@ -17,10 +17,11 @@ import java.util.Random;
 public class DataCommon {
 
     // appid
-    private static String AppId = "kexinjinrong";
-    private String InterfaceName;
+    private static String AppId = "signbill";
     private String data;
     private String key;
+    private String DeviceId;
+    private String DeviceType;
     // 时间戳
     public String timestamp;
 
@@ -48,7 +49,7 @@ public class DataCommon {
      *
      *
      */
-    public MRequest createRequest(String _InterfaceName, Object _data,
+    public MRequest createRequest(String DeviceId,String DeviceType, Object _data,
                                   String _key) {
         if (!_data.equals("")) {
             data = JsonUtil.toJson(_data);
@@ -57,14 +58,17 @@ public class DataCommon {
             data="";
         }
         key = _key;
+        this.DeviceId = DeviceId;
+        this.DeviceType = DeviceType;
+
         timeStamp();// 生成时间戳
-        InterfaceName = _InterfaceName;
         MRequest req = new MRequest();
         req.setAppId(AppId);// APPID
-        req.setInterfaceName(InterfaceName);// 接口名
         req.setSignData(GetSignature());// 签名后的数据
         req.setTimeStamp(timestamp);// 时间戳
-        req.setData(data);
+        req.setPostData(data);
+        req.setDeviceId(DeviceId);
+        req.setDeviceType(DeviceType);
         return req;
     }
 
@@ -86,7 +90,7 @@ public class DataCommon {
      */
     private String GetSignature() {
         try {
-            String str = AppId + InterfaceName + timestamp + data + key;
+            String str = AppId + DeviceId+DeviceType + data+ timestamp  + key;
 //            LogCommon.LogShowPrint("签名原型"+str);
             MD5 md5 = new MD5();
             String result = md5.encryption(str);

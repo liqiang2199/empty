@@ -1,6 +1,23 @@
 package com.empty.cuplibrary.weight.been;
 
 public class MRequest {
+
+
+	private String AppId;
+	private String DeviceType;
+	private String SignData;
+	private String TimeStamp;
+	private String DeviceId;
+	private String PostData;
+
+	public String getPostData() {
+		return PostData;
+	}
+
+	public void setPostData(String postData) {
+		PostData = postData;
+	}
+
 	public String getAppId() {
 		return AppId;
 	}
@@ -9,12 +26,12 @@ public class MRequest {
 		AppId = appId;
 	}
 
-	public String getInterfaceName() {
-		return InterfaceName;
+	public String getDeviceType() {
+		return DeviceType;
 	}
 
-	public void setInterfaceName(String interfaceName) {
-		InterfaceName = interfaceName;
+	public void setDeviceType(String deviceType) {
+		DeviceType = deviceType;
 	}
 
 	public String getSignData() {
@@ -32,17 +49,13 @@ public class MRequest {
 	public void setTimeStamp(String timeStamp) {
 		TimeStamp = timeStamp;
 	}
-	public String getData() {
-		return Data;
+
+	public String getDeviceId() {
+		return DeviceId;
 	}
 
-	public void setData(String data) {
-		Data = data;
+	public void setDeviceId(String deviceId) {
+		DeviceId = deviceId;
 	}
-	private String AppId;
-	private String InterfaceName;
-	private String SignData;
-	private String TimeStamp;
-	private String Data;
 	
 }
