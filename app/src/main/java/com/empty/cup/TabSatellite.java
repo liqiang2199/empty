@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * Created by empty cup on 2017/8/29.
- * 实现卫星菜单效果
+ * 实现卫星菜单效果 tab 动画
  */
 
 public class TabSatellite extends Activity{
