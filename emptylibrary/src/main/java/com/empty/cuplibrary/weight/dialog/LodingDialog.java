@@ -6,6 +6,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.empty.cuplibrary.R;
 
@@ -17,11 +18,11 @@ import com.empty.cuplibrary.R;
 public class LodingDialog {
 
     private Dialog mydialog;
+    private TextView loding_tip;//文本提示
     private static LodingDialog dialogCommon;
 //    private ImageView dialog_pros;
-
     //IntentMange管理
-    public LodingDialog(){
+    private LodingDialog(){
 
         dialogCommon = this;
     }
@@ -50,6 +51,7 @@ public class LodingDialog {
         mydialog = new Dialog(context, R.style.NobackDialog);
         LayoutInflater inflater = LayoutInflater.from(context);
         View dialogView = inflater.inflate(R.layout.dialog_loading, null);
+        loding_tip = (TextView) dialogView.findViewById(R.id.loding_tip);
         ImageView dialog_pros = (ImageView) dialogView.findViewById(R.id.dialog_pros);
 
         dialog_pros.setImageResource(R.drawable.animal_dialog_loding);

@@ -1,4 +1,4 @@
-package com.empty.cup;
+package com.empty.cup.wight;
 
 /**
  * Created by empty cup on 2017/7/19.
@@ -16,6 +16,8 @@ import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.empty.cup.R;
 
 public class Chess_Panel extends View{
     private int myPanelWidth ;        //棋盘宽度
@@ -66,7 +68,7 @@ public class Chess_Panel extends View{
         myPaint.setDither(true);            //设置画笔是否防抖动
         myPaint.setStyle(Paint.Style.STROKE);        //设置画笔样式，这里使用描边
 
-        myWhitePice = BitmapFactory.decodeResource(getResources(),R.mipmap.etk); //设置棋子图片
+        myWhitePice = BitmapFactory.decodeResource(getResources(), R.mipmap.etk); //设置棋子图片
         myBlackPice = BitmapFactory.decodeResource(getResources(), R.mipmap.eve);
 
     }
@@ -315,7 +317,7 @@ public class Chess_Panel extends View{
     }
 
     //重新开始游戏
-    protected void restartGame(){
+    public void restartGame(){
         myWhiteArray.clear();
         myBlackArray.clear();
         isGemOver = false;

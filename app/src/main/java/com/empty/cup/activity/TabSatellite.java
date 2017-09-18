@@ -1,4 +1,4 @@
-package com.empty.cup;
+package com.empty.cup.activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -7,9 +7,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AnimationSet;
 import android.widget.ImageView;
 
+import com.empty.cup.R;
 import com.empty.cuplibrary.weight.tools.ToastTools;
 
 import java.util.ArrayList;

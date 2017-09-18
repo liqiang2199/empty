@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.empty.cup.Chess_Panel
+    <com.empty.cup.wight.Chess_Panel
         android:id="@+id/main_panel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

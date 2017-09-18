@@ -22,7 +22,7 @@
             android:src="@drawable/common_loading4_0"/>
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/loding_tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

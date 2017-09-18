@@ -7,10 +7,10 @@
     android:layout_gravity="center_vertical"
     android:gravity="center_vertical"
     android:background="@drawable/home_time"
-    android:layout_margin="@dimen/activity_title_kuan_20">
+    android:layout_margin="@dimen/activity_empty_kuan_30">
 
 
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/pading_kuan_5"
         android:background="@drawable/shape_version"/>
@@ -19,9 +19,11 @@
             android:id="@+id/title"
             android:layout_width="fill_parent"
             android:layout_height="40.0dip"
-            android:gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/activity_title_kuan_20"
             android:text="@string/dialog_UpdateAPP_tip"
-            android:textColor="@color/back"
+            android:textColor="@color/white"
+            android:background="@color/baseblu"
             android:textSize="@dimen/textsize_16"
             android:visibility="visible" />
 
@@ -38,7 +40,10 @@
                 android:id="@+id/tv_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:gravity="center_horizontal"
+                android:text="dadfasdfasdfsadfsadfdscdfdsfdsafasdfasddfdf"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 
@@ -61,11 +66,11 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:gravity="center"
-                android:textColor="@color/baseblu"
+                android:textColor="@color/hui"
                 android:textSize="@dimen/textsize_16"
                 android:text="@string/dialog_srue" />
             <LinearLayout
-                android:layout_width="1dp"
+                android:layout_width="1.0px"
                 android:layout_height="match_parent"
                 android:background="#ffd0d0d0"></LinearLayout>
 
@@ -76,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:gravity="center"
-                android:textColor="@color/hui"
+                android:textColor="@color/baseblu"
                 android:textSize="@dimen/textsize_16"
                 android:text="@string/dialog_cancel" />
         </LinearLayout>

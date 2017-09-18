@@ -1,12 +1,14 @@
-package com.empty.cup;
+package com.empty.cup.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.empty.cup.R;
+import com.empty.cup.wight.Chess_Panel;
 
 /**
  * Created by empty cup on 2017/7/19.
