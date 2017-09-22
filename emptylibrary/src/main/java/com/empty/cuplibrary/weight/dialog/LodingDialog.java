@@ -61,6 +61,12 @@ public class LodingDialog {
         mydialog.setContentView(dialogView);
         mydialog.show();
     }
+    public void setTextTip(String text){
+        //提示框里面的文字提示
+        if (loding_tip != null){
+            loding_tip.setText(text);
+        }
+    }
     /***
      * 关闭加载对话框
      *
