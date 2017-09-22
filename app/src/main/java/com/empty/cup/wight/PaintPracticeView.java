@@ -32,7 +32,8 @@ public class PaintPracticeView extends View {
 
     private int bitmapWidth;
     private int height;
-    private Matrix matrix;
+
+    private Path mPath;//画出图片路径
 
 
     public PaintPracticeView(Context context) {
@@ -56,16 +57,18 @@ public class PaintPracticeView extends View {
         mPaint.setAntiAlias(true);
         //设定是否使用图像抖动处理，会使绘制出来的图片颜色更加平滑和饱满，图像更加清晰
         mPaint.setDither(true);
-        mPaint.setTextSize(32);
+//        mPaint.setTextSize(100);
         mPaint.setColor(getResources().getColor(R.color.colorPrimary));
         mPaint.setShadowLayer(2, 3, 3, Color.rgb(180, 180, 180));
 
         bitmap= BitmapFactory.decodeResource(getResources(),R.mipmap.ic_vector_home_normal);//创建Bitmap对象
+        //第二个图片
         bitmappass= BitmapFactory.decodeResource(getResources(),R.mipmap.ic_vector_home_pressed);//bitmappass
 
         bitmapWidth=bitmap.getWidth();//得到图片的宽
         bitmapHeight=bitmap.getHeight();//得到图片的高
-        matrix=new Matrix();
+
+        mPath = new Path();
     }
 
 
@@ -74,9 +77,10 @@ public class PaintPracticeView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        canvas.drawBitmap(bitmappass,200,200,mPaint);
-        canvas.drawBitmap(bitmap,200,200,mPaint);
-//        canvas.drawCircle(200, 200, 100, mPaint);           //画实心圆
+        canvas.drawBitmap(bitmappass,400,400,mPaint);
+        //画一个相同大小的图片
+
+        canvas.drawBitmap(bitmap,400,400,mPaint);
 
 
     }
