@@ -9,54 +9,83 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.empty.cup.wight.MaskProgress;
 import com.empty.cuplibrary.weight.dataprocessing.JsonUtil;
 
 import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by empty cup on 2017/7/21.
+ * 仿美团的底部tab 点击动画效果
+ * 使用遮罩层实现
  */
 
 public class TestEmpty extends Activity{
 
-    private Map<String,String>  maplist = new HashMap<>();
-    private ArrayList<Map<String,String>> mapslist = new ArrayList<>();
+   private MaskProgress maskProgress;
+   private MaskProgress maskProgress1;
+   private MaskProgress maskProgress2;
+   private MaskProgress maskProgress3;
 
-    private ImageView image_normal;
-    private ImageView image_press;
-    private LinearLayout liner_ren;
+    private List<MaskProgress> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
 
-//        liner_ren = (LinearLayout) findViewById(R.id.liner_ren);
+        maskProgress = (MaskProgress) findViewById(R.id.star_pross);
+        maskProgress1 = (MaskProgress) findViewById(R.id.star_pross1);
+        maskProgress2 = (MaskProgress) findViewById(R.id.star_pross2);
+        maskProgress3 = (MaskProgress) findViewById(R.id.star_pross3);
 
-//        image_press = (ImageView) findViewById(R.id.image_press);
-//        image_normal = (ImageView) findViewById(R.id.image_normal);
-//        image_normal.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                liner_ren.setVisibility(View.VISIBLE);
-//                Animation_F();
-//            }
-//        });
+        OnClick(maskProgress);
+        OnClick(maskProgress1);
+        OnClick(maskProgress2);
+        OnClick(maskProgress3);
+
+        list.add(maskProgress);
+        list.add(maskProgress1);
+        list.add(maskProgress2);
+        list.add(maskProgress3);
 
     }
-    private void Animation_F(){
-        AnimatorSet animatorSet = new AnimatorSet();//组合动画
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(liner_ren, "scaleX", 0f, 1f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(liner_ren, "scaleY", 0f, 1f);
-        ObjectAnimator scale = ObjectAnimator.ofFloat(liner_ren, "alpha", 1f, 0f);
+    private void OnClick(View view){
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.star_pross:
+                        OnClick_False(maskProgress);
 
-        animatorSet.setDuration(2000);
-        animatorSet.setInterpolator(new DecelerateInterpolator());
-        animatorSet.play(scaleX).with(scaleY).with(scale);//两个动画同时开始
-        animatorSet.start();
+                        break;
+                    case R.id.star_pross1:
+                        OnClick_False(maskProgress1);
+
+                        break;
+                    case R.id.star_pross2:
+                        OnClick_False(maskProgress2);
+                        break;
+                    case R.id.star_pross3:
+                        OnClick_False(maskProgress3);
+                        break;
+                }
+            }
+        });
     }
+
+    private void OnClick_False(MaskProgress maskProgress1){
+        for (MaskProgress maskProgress : list){
+            maskProgress.setProgress(0);
+            maskProgress.updateProgress();
+        }
+        maskProgress1.setProgress(360);
+        maskProgress1.initial();
+    }
+
 }

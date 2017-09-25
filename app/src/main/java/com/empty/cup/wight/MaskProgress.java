@@ -95,7 +95,7 @@ public class MaskProgress extends View{
     public void setAnimateListener(AnimateListener animateListener) {
         this.animateListener = animateListener;
     }
-
+    //设置 前进的 范围
     public void setProgress(float destProgress) {
         if(destProgress > max)
             try {
@@ -106,7 +106,8 @@ public class MaskProgress extends View{
 
         this.destProgress = destProgress;
         oldRealProgress = realProgress;
-        realProgress = (float) (destProgress * rate);
+//        realProgress = (float) (destProgress * rate);
+        realProgress = (float) (destProgress);
     }
 
     public float getProgress(){
@@ -181,7 +182,8 @@ public class MaskProgress extends View{
 
         rate = 360 / max;
         currentProgress = 0;
-        realProgress = (float) (destProgress * rate);
+//        realProgress = (float) (destProgress * rate);
+        realProgress = (float) (destProgress);
         srcIn = new PorterDuffXfermode(Mode.SRC_IN);
         step = 360 / (totalTime * 1000 / REFRESH);
 
@@ -198,19 +200,24 @@ public class MaskProgress extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        //是normal 的图片
         canvas.drawBitmap(bg, 0, (getHeight() - bg.getHeight()) / 2, paint);
+
         int rc = canvas.saveLayer(0, (getHeight() - bg.getHeight()) / 2, bg.getWidth(), (getHeight() + bg.getHeight()) / 2, null, Canvas.ALL_SAVE_FLAG);
 
         paint.setFilterBitmap(false);
+        // 在 没有点击之前的图片上面画一个 圆 大小和原图一致 点击的时候显示 有颜色的图片 同时 增加半径
         if(initialing){
-            Log.v("ini","  花园 " + radius*currentProgress);
 //            canvas.drawArc(rectF, startAngle, currentProgress, true, paint);
-            canvas.drawCircle(centerX,centerY,radius*currentProgress,paint);
+//            int  radiu = radius/50;
+            canvas.drawCircle(centerX,centerY,currentProgress/2,paint);
         }else{
 //            canvas.drawArc(rectF, startAngle, realProgress, true, paint);
-            canvas.drawCircle(centerX,centerY,radius*realProgress,paint);
+            canvas.drawCircle(centerX,centerY,realProgress,paint);
         }
+        //过渡模式
         paint.setXfermode(srcIn);
+        // 显示被遮罩 的背景
         canvas.drawBitmap(ct, 0, (getHeight() - ct.getHeight()) / 2, paint);
 
         paint.setXfermode(null);
@@ -284,10 +291,10 @@ public class MaskProgress extends View{
         public void run() {
             while(initialing){
                 postInvalidate();
-                if(currentProgress < realProgress){
+                if(currentProgress < realProgress/2){
                     currentProgress += step * rate;
-                    if(currentProgress > realProgress)
-                        currentProgress = realProgress;
+                    if(currentProgress > realProgress/2)
+                        currentProgress = realProgress/2;
                 }else{
                     // new Thread(new Runnable() {
                     //
