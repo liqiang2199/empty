@@ -63,6 +63,7 @@ public class TestEmpty extends Activity{
                     case R.id.star_pross:
                         OnClick_False(maskProgress);
 
+
                         break;
                     case R.id.star_pross1:
                         OnClick_False(maskProgress1);
