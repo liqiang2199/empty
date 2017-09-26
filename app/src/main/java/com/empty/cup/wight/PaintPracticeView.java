@@ -17,6 +17,7 @@ import com.empty.cup.R;
 
 /**
  * Created by empty cup on 2017/9/22.
+ * 练习画图
  */
 
 public class PaintPracticeView extends View {

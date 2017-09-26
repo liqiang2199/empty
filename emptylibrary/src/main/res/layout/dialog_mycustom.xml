@@ -66,7 +66,7 @@
             <LinearLayout
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/basesub"></LinearLayout>
+                android:background="@color/basesub"/>
 
             <Button
                 android:id="@+id/negativeButton"

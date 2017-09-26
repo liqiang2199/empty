@@ -22,6 +22,7 @@
     <color name="footerline">#D7C6AC</color>
     <!--textcolor灰色 -->
     <color name="hui">#94989b</color>
+    <color name="hui_back">#767676</color>
     <!--手势-->
     <color name="red">#ff0000</color>
     <color name="base_red">#E6212A</color>
