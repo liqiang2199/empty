@@ -27,3 +27,11 @@ Observable<ResponseBody> call=postRoute.getSearchBooksObservable(req.getAppId(),
 
 Call<ResponseBody> call = postRoute.getSearchBooks(Appid,InterfaceName,TimeStamp,signdata,body);
   
+  //取消 订阅
+  @Override
+    protected void onDestroy(){
+        super.onDestroy()
+        if (mCompositeSubscription.hasSubscriptions()){
+            mCompositeSubscription.unsubscribe();
+        }
+    }
