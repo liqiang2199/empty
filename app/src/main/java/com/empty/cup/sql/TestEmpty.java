@@ -1,4 +1,4 @@
-package com.empty.cup;
+package com.empty.cup.sql;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -9,6 +9,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.empty.cup.R;
 import com.empty.cup.wight.MaskProgress;
 import com.empty.cuplibrary.weight.dataprocessing.JsonUtil;
 

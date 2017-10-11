@@ -1,9 +1,9 @@
 package com.empty.cup;
 
+import android.app.Activity;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +20,7 @@ import java.io.File;
 /**
  * 实现  OkHttp  下载
  */
-public class MainActivity extends AppCompatActivity implements ProgressResponseBody.ProgressListener{
+public class MainActivity extends Activity implements ProgressResponseBody.ProgressListener{
 
     public static final String TAG = "MainActivity";
     public static final String PACKAGE_URL = "http://gdown.baidu.com/data/wisegame/df65a597122796a4/weixin_821.apk";
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements ProgressResponseB
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Init();
     }
 
