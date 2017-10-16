@@ -1,12 +1,12 @@
 # empty
-使用方法
+##使用方法
 - 第一步：
 allprojects { repositories {
 
 		maven { url 'https://jitpack.io' }
 	}
 }  
-第二步：
+- 第二步：
 dependencies { compile 'com.github.liqiang2199:empty:0.1' }
 
 aar 创建
