@@ -1,6 +1,6 @@
 # empty
 使用方法
-第一步：
+- 第一步：
 allprojects { repositories {
 
 		maven { url 'https://jitpack.io' }
