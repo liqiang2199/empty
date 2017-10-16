@@ -1,5 +1,5 @@
 # empty
-##使用方法
+## 使用方法
 - 第一步：
 allprojects { repositories {
 
@@ -12,8 +12,11 @@ dependencies { compile 'com.github.liqiang2199:empty:0.1' }
 aar 创建
 
 //body 请求的数据体 提交一个json
-
+``` objc
 RequestBody body=RequestBody.create(MediaType.parse("application/json"),req.getData());
+
+```
+
 
 //这句 是使用一个没有 RxJava 的 
 
