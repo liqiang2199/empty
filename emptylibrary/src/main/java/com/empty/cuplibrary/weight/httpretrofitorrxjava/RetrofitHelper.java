@@ -3,6 +3,8 @@ package com.empty.cuplibrary.weight.httpretrofitorrxjava;
 import android.content.Context;
 import android.util.Log;
 
+import com.empty.cuplibrary.weight.tools.ToastTools;
+import com.empty.cuplibrary.weight.tools.UtilsTools;
 import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
@@ -21,7 +23,6 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observable;
 import rx.Observer;
-//import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
@@ -42,7 +43,7 @@ public class RetrofitHelper {
     //网络请求延迟时间，默认为50秒
     private final static int DEFAULT_TIMEOUT = 0x000032;
     private Context mCntext;
-
+    private String url;
 
     /**
      * 打印 请求体  响应体
@@ -64,6 +65,7 @@ public class RetrofitHelper {
             .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
+            .sslSocketFactory(SSLSocketFactoryUtils.createSSLSocketFactory(), SSLSocketFactoryUtils.createTrustAllManager())
             .build();
 
 
@@ -71,18 +73,19 @@ public class RetrofitHelper {
 
     private static RetrofitHelper instance = null;
     private Retrofit mRetrofit = null;
-    public static RetrofitHelper getInstance(Context context){
+    public static RetrofitHelper getInstance(Context context, String url){
         if (instance == null){
             synchronized (RetrofitHelper.class){
                 if (instance == null){
-                    instance = new RetrofitHelper(context);
+                    instance = new RetrofitHelper(context,url);
                 }
             }
         }
         return instance;
     }
-    private RetrofitHelper(Context mContext){
+    private RetrofitHelper(Context mContext, String url){
         mCntext = mContext;
+        this.url = url;
         init();
     }
 
@@ -92,13 +95,12 @@ public class RetrofitHelper {
 
     // 初始化界面
     private void resetApp() {
-
-
-//        String myurl = "http://japi.juhe.cn/comic/";
-        String myurl = "http://192.168.199.87:8003/api/";
-
+        if (UtilsTools.StringNull(url)){
+            ToastTools.Toast_ShortTip(mCntext,"请求地址为空");
+            return;
+        }
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(myurl)
+                .baseUrl(url)
                 .client(client)
                 .addConverterFactory(factory)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
@@ -116,7 +118,6 @@ public class RetrofitHelper {
                 call
 //                        .subscribeOn(Schedulers.newThread())//请求在新的线程中执行
                         .subscribeOn(Schedulers.io())
-                        //使用的时候必须要
 //                        .observeOn(AndroidSchedulers.mainThread())
 
                         .subscribe(new Observer<ResponseBody>() {

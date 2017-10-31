@@ -74,12 +74,12 @@ public class UseRetrofit {
 //
 //        RequestBody body=RequestBody.create(MediaType.parse("application/json"),req.getData());
 //
-//        //这句 是使用一个没有 RxJava 的
+        //这句 是使用一个没有 RxJava 的
 //        Observable<ResponseBody> call=postRoute.getSearchBooksObservable(req.getAppId(),req.getInterfaceName(),req.getTimeStamp()
 //                ,req.getSignData(),body);
-////        Log.v("call","     请求 call     "+call);
-//        //这句 是使用一个没有 RxJava 的
-////        Call<ResponseBody> call = postRoute.getSearchBooks(Appid,InterfaceName,TimeStamp,signdata,body);
+//        Log.v("call","     请求 call     "+call);
+//        这句 是使用一个没有 RxJava 的
+//        Call<ResponseBody> call = postRoute.getSearchBooks(Appid,InterfaceName,TimeStamp,signdata,body);
 //
 //        RetrofitHelper.getInstance(mContext)._postAsynObservable(mCompositeSubscription,call,this);
 //
