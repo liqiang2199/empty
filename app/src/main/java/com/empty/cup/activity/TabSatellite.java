@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.empty.cup.R;
-import com.empty.cuplibrary.weight.tools.ToastTools;
+import com.empty.cuplibrary.weight.tools.ToastLogTools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -116,19 +116,19 @@ public class TabSatellite extends Activity{
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.iamage_photo1:
-                        ToastTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo1");
+                        ToastLogTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo1");
                         break;
                     case R.id.iamage_photo2:
-                        ToastTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo2");
+                        ToastLogTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo2");
                         break;
                     case R.id.iamage_photo3:
-                        ToastTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo3");
+                        ToastLogTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo3");
                         break;
                     case R.id.iamage_photo4:
-                        ToastTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo4");
+                        ToastLogTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo4");
                         break;
                     case R.id.iamage_photo5:
-                        ToastTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo5");
+                        ToastLogTools.Toast_ShortTip(TabSatellite.this,"点击了iamage_photo5");
                         break;
                 }
             }

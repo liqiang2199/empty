@@ -9,6 +9,16 @@ public class MRequest {
 	private String TimeStamp;
 	private String DeviceId;
 	private String PostData;
+	private String ClientType;
+
+
+	public String getClientType() {
+		return ClientType;
+	}
+
+	public void setClientType(String clientType) {
+		ClientType = clientType;
+	}
 
 	public String getPostData() {
 		return PostData;
