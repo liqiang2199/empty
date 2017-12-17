@@ -22,13 +22,21 @@
         android:name=".application.ExampleApplication"
         android:theme="@style/AppTheme">
         <activity android:name=".sql.TestEmpty">
+
+        </activity>
+        <activity android:name=".activity.TabSatellite" android:label="卫星菜单Tab">
+
+        </activity>
+
+        <activity android:name=".zfbbanklist.ZFBBankListActivity" android:label="仿支付宝银行卡界面的">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".activity.TabSatellite" android:label="卫星菜单Tab"></activity>
     </application>
 
 </manifest>
