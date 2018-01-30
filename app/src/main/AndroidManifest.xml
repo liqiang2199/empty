@@ -30,6 +30,10 @@
 
         <activity android:name=".zfbbanklist.ZFBBankListActivity" android:label="仿支付宝银行卡界面的">
 
+        </activity>
+
+
+        <activity android:name=".activity.ScrollViewEnlargeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +41,7 @@
             </intent-filter>
 
         </activity>
+
     </application>
 
 </manifest>
