@@ -3,6 +3,7 @@ package com.empty.cup.activity
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
+import android.widget.ScrollView
 import com.empty.cup.R
 
 @SuppressLint("Registered")
@@ -13,8 +14,11 @@ import com.empty.cup.R
 class ScrollViewEnlargeActivity :Activity() {
 
 
+    private var scrollview_liner:ScrollView ?= null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrollview)
+        scrollview_liner =  findViewById(R.id.scrollview_liner)
     }
 }
