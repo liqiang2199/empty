@@ -14,11 +14,11 @@ import com.empty.cup.R
 class ScrollViewEnlargeActivity :Activity() {
 
 
-    private var scrollview_liner:ScrollView ?= null
+//    private var scrollview_liner:ScrollView ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrollview)
-        scrollview_liner =  findViewById(R.id.scrollview_liner)
+//        scrollview_liner =  findViewById(R.id.scrollview_liner)
     }
 }

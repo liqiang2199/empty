@@ -35,6 +35,11 @@
 
         <activity android:name=".activity.ScrollViewEnlargeActivity" android:label="小米的拉动 子空间 放大">
 
+        </activity>
+
+        <activity android:name=".activity.TestDialog">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
