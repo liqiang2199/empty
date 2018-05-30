@@ -7,15 +7,24 @@ import android.os.Bundle
 import android.support.annotation.RequiresApi
 import com.empty.cup.R
 import com.empty.cuplibrary.weight.dialog.VersionDialog
+import com.empty.cuplibrary.weight.tools.TextTool
+import com.empty.cuplibrary.weight.tools.kot
+import kotlinx.android.synthetic.main.activity_view_page_jd.view.*
 
 /**
  * Created by empty cup on 2018/5/22.
  */
 class TestDialog :Activity(){
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_dialog)
+        findViewById(R.id.textView).text
+
+
+
+
         findViewById(R.id.textView).setOnClickListener {
 
             val veersion = VersionDialog.Builder(this)

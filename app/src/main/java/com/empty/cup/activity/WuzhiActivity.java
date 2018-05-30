@@ -1,5 +1,6 @@
 package com.empty.cup.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 
 import com.empty.cup.R;
 import com.empty.cup.wight.Chess_Panel;
+import com.empty.cuplibrary.weight.tools.TextTool;
 
 /**
  * Created by empty cup on 2017/7/19.
@@ -20,6 +22,7 @@ public class WuzhiActivity extends Activity{
     private Chess_Panel panel;
     private AlertDialog.Builder builder;
 
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
