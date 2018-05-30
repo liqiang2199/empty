@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.support.annotation.RequiresApi
 import com.empty.cup.R
 import com.empty.cuplibrary.weight.dialog.VersionDialog
-import com.empty.cuplibrary.weight.tools.TextTool
-import com.empty.cuplibrary.weight.tools.kot
 import kotlinx.android.synthetic.main.activity_view_page_jd.view.*
 
 /**

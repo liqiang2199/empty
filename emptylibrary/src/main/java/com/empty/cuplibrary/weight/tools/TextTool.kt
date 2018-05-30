@@ -5,7 +5,7 @@ import android.text.Html
 
 /**
  * Created by empty cup on 2018/5/29.
- *
+ * 下面都是包级函数
  */
 
 /**
