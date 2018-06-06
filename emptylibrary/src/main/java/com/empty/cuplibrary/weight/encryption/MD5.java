@@ -19,7 +19,11 @@ public class MD5 {
 
     public static MD5 getIstance(){
         if(md5==null){
-            md5 = new MD5();
+            synchronized (MD5.class){
+                if (md5 == null){
+                    md5 = new MD5();
+                }
+            }
         }
         return md5;
     }

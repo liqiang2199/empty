@@ -1,19 +1,22 @@
 package com.empty.cuplibrary.weight.tools;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
 /**
  * Created by empty cup on 2017/7/28.
+ *
  */
-
+@SuppressLint("ShowToast")
 public class ToastLogTools {
 
     public static boolean isLog = true;
     public static String logTag = "kxdebug";
     public static Toast mToast;
-    public static void Toast_LongTip(Context context,String msg){
+
+    public static void Toast_LongTip(Context context, String msg){
 
         if(mToast==null){
             mToast=Toast.makeText(context,msg,Toast.LENGTH_LONG);

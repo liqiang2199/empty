@@ -13,10 +13,8 @@ public class ViewInjectUtils
 
 	public static void inject(Activity activity)
 	{
-//		Log.e("TAG", "inject");
 		injectContentView(activity);
 		injectViews(activity);
-		// injectEvents(activity);
 	}
 
 
@@ -32,7 +30,6 @@ public class ViewInjectUtils
 		// 遍历所有成员变量
 		for (Field field : fields)
 		{
-//			Log.e("TAG", field.getName()+"");
 			ViewInject viewInjectAnnotation = field
 					.getAnnotation(ViewInject.class);
 			if (viewInjectAnnotation != null)
@@ -40,7 +37,6 @@ public class ViewInjectUtils
 				int viewId = viewInjectAnnotation.value();
 				if (viewId != -1)
 				{
-//					Log.e("TAG", viewId+"");
 					// 初始化View
 					try
 					{

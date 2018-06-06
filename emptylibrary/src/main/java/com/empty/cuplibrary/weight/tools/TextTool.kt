@@ -14,7 +14,7 @@ import android.text.Html
 fun String.textHtmlcolor(color:String):String{
 
     return Html.fromHtml("<font color=\"$color\">"+
-            if (UtilsTools.StringNull(this)){
+            if (UtilsEmptyTools.StringNull(this)){
                 this
             }else{
                 ""
@@ -25,7 +25,7 @@ fun String.textHtmlcolor(color:String):String{
  */
 fun String.textHtmlcolor(title:String,color:String):String{
 
-    return Html.fromHtml("$title:<font color=\"$color\">"+if (UtilsTools.StringNull(this)){
+    return Html.fromHtml("$title:<font color=\"$color\">"+if (UtilsEmptyTools.StringNull(this)){
         this
     }else{
         ""
@@ -38,7 +38,7 @@ fun String.textHtmlcolor(title:String,color:String):String{
 fun String.textHtmlSizeColor(size:Int,color: String):String{
 
     return Html.fromHtml("<font size=\"$size\" color=\"$color\">"+
-            if (UtilsTools.StringNull(this)){
+            if (UtilsEmptyTools.StringNull(this)){
                 this
             }else{
                 ""
@@ -50,7 +50,7 @@ fun String.textHtmlSizeColor(size:Int,color: String):String{
 fun String.textHtmlTitleSizeColor(title:String,size:Int,color: String):String{
 
     return Html.fromHtml("$title:<font size=\"$size\" color=\"$color\">"+
-            if (UtilsTools.StringNull(this)){
+            if (UtilsEmptyTools.StringNull(this)){
                 this
             }else{
                 ""

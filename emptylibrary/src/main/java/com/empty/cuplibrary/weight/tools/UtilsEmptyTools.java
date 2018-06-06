@@ -1,13 +1,17 @@
 package com.empty.cuplibrary.weight.tools;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Environment;
 import android.text.TextUtils;
 
 /**
  * Created by Administrator on 2017/7/7.
  */
 
-public class UtilsTools {
+public class UtilsEmptyTools {
 
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
@@ -27,10 +31,7 @@ public class UtilsTools {
 
     //字符串为空判断
     public static boolean StringNull(String s) {
-        if (s == null || s.isEmpty() || s.equals("")||s.equals("null")) {
-            return false;
-        }
-        return true;
+        return (s == null || s.isEmpty() || s.equals("") || s.equals("null"));
 
     }
 
@@ -57,13 +58,39 @@ public class UtilsTools {
      * @param inputchar
      * @return
      */
-    public static boolean Edit_Chinesecharacters(String inputchar){
-        if (!StringNull(inputchar)){
-            return true;
+    public static boolean Edit_Chinesecharacters(String inputchar) {
+        return !StringNull(inputchar) && inputchar.matches("[\u4e00-\u9fa5]+");
+    }
+
+    /**
+     * 判断网络连接状况
+     * @param context
+     * @return
+     */
+    public static boolean isNetworkConnected(Context context) {
+        if (context != null) {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context
+                    .getSystemService(Context.CONNECTIVITY_SERVICE);
+            @SuppressLint("MissingPermission")
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            if (mNetworkInfo != null) {
+                return mNetworkInfo.isAvailable();
+            }
         }
-        if (!inputchar.toString().matches("[\u4e00-\u9fa5]+")) {
+        return false;
+    }
+    /**
+     * 检查是否存在SDCard
+     *
+     * @return
+     */
+    public static boolean hasSdcard() {
+        String state = Environment.getExternalStorageState();
+        if (state.equals(Environment.MEDIA_MOUNTED)) {
+            return true;
+        } else {
             return false;
         }
-        return true;
     }
+
 }

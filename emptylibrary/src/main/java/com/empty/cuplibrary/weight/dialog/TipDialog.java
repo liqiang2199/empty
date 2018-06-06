@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.empty.cuplibrary.R;
-import com.empty.cuplibrary.weight.tools.UtilsTools;
+import com.empty.cuplibrary.weight.tools.UtilsEmptyTools;
 
 
 /**
@@ -47,7 +47,7 @@ public class TipDialog {
          但是设置width和height为MATCH_PARENT的代价是无法设置gravity的值，这就无法调整Dialog中内容的位置，
          Dialog的内容会显示在屏幕左上角位置不过可以通过Padding来调节Dialog内容的位置。
          **/
-        params.width = width- UtilsTools.dip2px(context,80);
+        params.width = width- UtilsEmptyTools.dip2px(context,80);
         params.height = height/2;
         window.setAttributes(params);
         tipdialog.show();
