@@ -16,7 +16,7 @@ import java.util.Map;
  *
  */
 public class SPUtils {
-	public SPUtils() {
+	private SPUtils() {
 		/* cannot be instantiated */
 		throw new UnsupportedOperationException("cannot be instantiated");
 	}
