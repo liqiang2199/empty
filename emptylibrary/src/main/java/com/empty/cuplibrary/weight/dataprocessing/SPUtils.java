@@ -15,8 +15,8 @@ import java.util.Map;
  * 数据存储 
  *
  */
-public class SPUtilsCommon {
-	public SPUtilsCommon() {
+public class SPUtils {
+	public SPUtils() {
 		/* cannot be instantiated */
 		throw new UnsupportedOperationException("cannot be instantiated");
 	}
@@ -40,11 +40,6 @@ public class SPUtilsCommon {
 		SharedPreferences.Editor editor = sp.edit();
 
 		if (object instanceof String) {
-//			try {
-//				editor.putString(key, DESUtil.encrypt((String)object));
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
 			editor.putString(key, (String)object);
 		} else if (object instanceof Integer) {
 
@@ -75,11 +70,6 @@ public class SPUtilsCommon {
 				Context.MODE_PRIVATE);
 
 		if (defaultObject instanceof String) {
-//			try {
-//				return sp.getString(key, DESUtil.decrypt((String) defaultObject));
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
 			return sp.getString(key, (String) defaultObject);
 		} else if (defaultObject instanceof Integer) {
 			return sp.getInt(key, (Integer) defaultObject);

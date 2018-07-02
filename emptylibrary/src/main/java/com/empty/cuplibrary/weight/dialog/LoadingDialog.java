@@ -15,27 +15,20 @@ import com.empty.cuplibrary.R;
  * Created by admin on 2016/11/15.
  * 加载对话框
  */
-public class LodingDialog {
+public class LoadingDialog {
 
     private Dialog mydialog;
     private TextView loding_tip;//文本提示
-    private static LodingDialog dialogCommon;
+    private static LoadingDialog dialogCommon;
 //    private ImageView dialog_pros;
     //IntentMange管理
-    private LodingDialog(){
-
-        dialogCommon = this;
+    private LoadingDialog(){
     }
-
-    public static LodingDialog getApplication(){
-        return dialogCommon;
-    }
-
-    public static LodingDialog getIstance(){
+    public static LoadingDialog getInstance(){
         if(dialogCommon==null){
-            synchronized (LodingDialog.class){
+            synchronized (LoadingDialog.class){
                 if (dialogCommon == null){
-                    dialogCommon = new LodingDialog();
+                    dialogCommon = new LoadingDialog();
                 }
             }
         }

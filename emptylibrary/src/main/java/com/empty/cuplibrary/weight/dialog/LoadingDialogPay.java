@@ -1,5 +1,6 @@
 package com.empty.cuplibrary.weight.dialog;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
@@ -21,11 +22,11 @@ import java.util.concurrent.TimeUnit;
  * Created by admin on 2016/11/15.
  * 加载支付完成对话框（轮询是显示）
  */
-public class LodingDialogPay {
+public class LoadingDialogPay {
 
     private Dialog mydialog;
     private LinearLayout lier_doc;//加入小数点
-    private static LodingDialogPay dialogCommon;
+    private static LoadingDialogPay dialogCommon;
 
     private ImageView[] dots;//初始化原点
     private int dotcCurrt=0;
@@ -33,20 +34,14 @@ public class LodingDialogPay {
     private ScheduledExecutorService scheduledExecutorService;
 
     //IntentMange管理
-    public LodingDialogPay(){
-
-        dialogCommon = this;
+    private LoadingDialogPay(){
     }
 
-    public static LodingDialogPay getApplication(){
-        return dialogCommon;
-    }
-
-    public static LodingDialogPay getIstance(){
+    public static LoadingDialogPay getInstance(){
         if(dialogCommon==null){
-            synchronized (LodingDialogPay.class){
+            synchronized (LoadingDialogPay.class){
                 if (dialogCommon == null){
-                    dialogCommon = new LodingDialogPay();
+                    dialogCommon = new LoadingDialogPay();
                 }
             }
         }
@@ -75,6 +70,7 @@ public class LodingDialogPay {
 
     }
     //更新界面显示
+    @SuppressLint("HandlerLeak")
     Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {

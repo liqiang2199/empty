@@ -130,7 +130,6 @@ public class ViewInjectUtils
 								}
 							});
 
-
 						} catch (Exception e) {
 							e.printStackTrace();
 						}

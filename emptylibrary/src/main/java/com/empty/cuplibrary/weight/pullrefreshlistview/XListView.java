@@ -22,7 +22,7 @@ import android.widget.Scroller;
 import android.widget.TextView;
 
 import com.empty.cuplibrary.R;
-import com.empty.cuplibrary.weight.tools.TimeTools;
+import com.empty.cuplibrary.weight.tools.TimeJavaTools;
 
 
 public class XListView extends ListView implements OnScrollListener {
@@ -190,11 +190,11 @@ public class XListView extends ListView implements OnScrollListener {
 	 */
 	 
 //	public void setRefreshTime() {
-//		String nowtime = "最近更新:" + TimeTools.getCurrentTime3();
+//		String nowtime = "最近更新:" + TimeJavaTools.getCurrentTime3();
 //		mHeaderTimeView.setText(nowtime);
 //	}
 	public void setRefreshTime2(String date) {
-		String nowtime = "最近更新:" + TimeTools.getCurrentTime3();
+		String nowtime = "最近更新:" + TimeJavaTools.getCurrentTime3();
 		mHeaderTimeView.setText(nowtime);
 	}
 	private void invokeOnScrolling() {

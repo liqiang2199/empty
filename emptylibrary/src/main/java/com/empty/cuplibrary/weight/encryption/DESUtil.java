@@ -15,7 +15,7 @@ public class DESUtil {
 
     private final static String DES = "DES";
     private final static String ENCODE = "UTF-8";
-    private final static String defaultKey = "kexindai";
+    private final static String defaultKey = "empty";//默认得key值
 
 
     /**

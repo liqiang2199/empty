@@ -1,6 +1,7 @@
 package com.empty.cuplibrary.weight.tools
 
 import android.annotation.SuppressLint
+import android.text.TextUtils
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -107,6 +108,20 @@ object TimeTools {
             timeStr = "刚刚"
         }
         return timeStr
+    }
+
+    /**
+     * 根据时间戳获取描述时间，3分钟前，1天前
+     * 仿朋友圈发布时间的显示不同的 时间
+     */
+    fun getDescriptionTimeFromTimestampString(timesTamp:String):String{
+        if (!TextUtils.isEmpty(timesTamp)){
+            return ""
+        }
+        if (UtilsEmptyTools.editIsAllNum(timesTamp)){
+            throw NumberFormatException("please afferent number")
+        }
+        return getDescriptionTimeFromTimestamp(timestamp = timesTamp.toLong())
     }
 
     /**

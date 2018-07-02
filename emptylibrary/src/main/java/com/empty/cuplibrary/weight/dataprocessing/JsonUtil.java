@@ -51,26 +51,4 @@ public class JsonUtil {
         return gson.fromJson(str, type);
     }
 
-    /**
-     * List 列表数据处理 返回MAP
-     * @param jsonArray
-     * @return
-     * @throws JSONException
-     */
-    public static  ArrayList<Map<String,String>> rentrunJsonBeen(JSONArray jsonArray) throws JSONException {
-
-        ArrayList<Map<String,String>> mapslist = new ArrayList<>();
-        for (int i = 0;i<jsonArray.length();i++) {
-            JSONObject json = jsonArray.getJSONObject(i);
-            Map<String, String> maplist = new HashMap<>();
-            Iterator iterator = json.keys();
-            while (iterator.hasNext()) {
-                String key = iterator.next() + "";
-                maplist.put(key, json.getString(key));
-            }
-
-            mapslist.add(maplist);
-        }
-        return mapslist;
-    }
 }
