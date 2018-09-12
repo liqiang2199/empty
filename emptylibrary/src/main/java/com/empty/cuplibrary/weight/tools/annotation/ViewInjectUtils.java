@@ -100,10 +100,10 @@ public class ViewInjectUtils
 			ViewOnClick annotationOnClick = method.getAnnotation(ViewOnClick.class);
 			if (null != annotationOnClick){
 				//能获取到数据 就获取 注解里面的值
-				int[] onClicBtnName = annotationOnClick.value();
-				if (onClicBtnName.length > 0){
+				int[] onClickBtnName = annotationOnClick.value();
+				if (onClickBtnName.length > 0){
 					//当里面有值得时候才进行绑定控件
-					for (final int viewOnClick:onClicBtnName){
+					for (final int viewOnClick:onClickBtnName){
 						if (viewOnClick == -1){
 							return;
 						}
@@ -137,7 +137,6 @@ public class ViewInjectUtils
 				}
 			}
 		}
-
 
 	}
 }
